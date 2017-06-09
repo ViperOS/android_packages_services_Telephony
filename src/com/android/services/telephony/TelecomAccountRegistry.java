@@ -236,7 +236,7 @@ final class TelecomAccountRegistry {
                 // TODO: Switch to using Icon.createWithResource() once that supports tinting.
                 Resources res = mContext.getResources();
                 Drawable drawable = res.getDrawable(DEFAULT_SIM_ICON, null);
-                drawable.setTint(res.getColor(R.color.default_sim_icon_tint_color, null));
+                drawable.setTint(res.getColor(R.color.default_sim_icon_tint_color_custom, null));
                 drawable.setTintMode(PorterDuff.Mode.SRC_ATOP);
 
                 int width = drawable.getIntrinsicWidth();
