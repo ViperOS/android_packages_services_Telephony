@@ -951,7 +951,7 @@ public class PhoneUtils {
                 // places the message at the forefront of the UI.
 
                 if (sUssdDialog == null) {
-                    sUssdDialog = new AlertDialog.Builder(context, THEME)
+                    sUssdDialog = new AlertDialog.Builder(new ContextThemeWrapper(context, R.style.DialerAlertDialogTheme))
                             .setPositiveButton(R.string.ok, null)
                             .setCancelable(true)
                             .setOnDismissListener(new DialogInterface.OnDismissListener() {
@@ -1085,10 +1085,6 @@ public class PhoneUtils {
                 // now show the dialog!
                 newDialog.show();
 
-                newDialog.getButton(DialogInterface.BUTTON_POSITIVE)
-                        .setTextColor(context.getResources().getColor(R.color.dialer_theme_color));
-                newDialog.getButton(DialogInterface.BUTTON_NEGATIVE)
-                        .setTextColor(context.getResources().getColor(R.color.dialer_theme_color));
             }
         }
     }
